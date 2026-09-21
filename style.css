@@ -1,38 +1,26 @@
-```css
-/* =========================================================
-   FELIPE HERRERA — PORTFOLIO
-   Dark technical / Cloud / Data aesthetic
-   ========================================================= */
-
-
-/* ---------------------------------------------------------
-   VARIABLES
-   --------------------------------------------------------- */
-
 :root {
-    --bg: #080b0d;
-    --bg-secondary: #0d1114;
-    --bg-card: #101519;
+    --bg: #ffffff;
+    --bg-soft: #f7f9f8;
+    --card: #ffffff;
 
-    --border: #1d292e;
-    --border-light: #26343a;
+    --text: #17201f;
+    --text-secondary: #52605e;
+    --text-muted: #7b8886;
 
-    --text: #e6edf0;
-    --text-secondary: #9aa8ad;
-    --text-muted: #64747a;
+    --border: #e5e9e8;
+    --border-dark: #d6dddb;
 
-    --accent: #54e1c1;
-    --accent-dark: #2a9e89;
-
-    --terminal: #0a0f11;
+    --accent: #159b80;
+    --accent-dark: #08745f;
+    --accent-soft: #e8f7f3;
 
     --max-width: 1180px;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    RESET
-   --------------------------------------------------------- */
+   ========================= */
 
 * {
     margin: 0;
@@ -47,6 +35,7 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
+
     font-family:
         "JetBrains Mono",
         "Fira Code",
@@ -62,71 +51,10 @@ a {
     text-decoration: none;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-}
 
-
-/* ---------------------------------------------------------
-   GLOBAL
-   --------------------------------------------------------- */
-
-.section {
-    width: min(var(--max-width), calc(100% - 40px));
-    margin: 0 auto;
-    padding: 110px 0;
-}
-
-.section-alt {
-    width: 100%;
-    max-width: none;
-    padding-left: max(20px, calc((100% - var(--max-width)) / 2));
-    padding-right: max(20px, calc((100% - var(--max-width)) / 2));
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(84, 225, 193, 0.025),
-            transparent 45%
-        ),
-        var(--bg-secondary);
-
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-}
-
-.section-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 18px;
-
-    margin-bottom: 50px;
-}
-
-.section-heading span {
-    color: var(--accent);
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-}
-
-.section-heading h2 {
-    font-size: 2rem;
-    font-weight: 500;
-    letter-spacing: -0.04em;
-}
-
-.section-intro {
-    max-width: 750px;
-    color: var(--text-secondary);
-    margin-top: -25px;
-    margin-bottom: 45px;
-}
-
-
-/* ---------------------------------------------------------
+/* =========================
    NAVBAR
-   --------------------------------------------------------- */
+   ========================= */
 
 .navbar {
     position: sticky;
@@ -136,12 +64,14 @@ img {
     background: rgba(255, 255, 255, 0.94);
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid #e5e7eb;
+    border-bottom: 1px solid var(--border);
 }
 
 .nav-container {
     width: min(var(--max-width), calc(100% - 40px));
-    height: 70px;
+
+    min-height: 70px;
+
     margin: auto;
 
     display: flex;
@@ -151,9 +81,11 @@ img {
 
 .logo {
     color: var(--text);
+
     font-size: 1.2rem;
     font-weight: 700;
-    letter-spacing: -0.05em;
+
+    letter-spacing: -0.06em;
 }
 
 .logo span {
@@ -162,13 +94,16 @@ img {
 
 nav {
     display: flex;
-    gap: 28px;
+    gap: 30px;
 }
 
 nav a {
-    color: var(--text-muted);
-    font-size: 0.75rem;
-    transition: color 0.2s ease;
+    color: var(--text-secondary);
+
+    font-size: 0.72rem;
+
+    transition:
+        color 0.2s ease;
 }
 
 nav a:hover {
@@ -176,19 +111,22 @@ nav a:hover {
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    HERO
-   --------------------------------------------------------- */
+   ========================= */
 
 .hero {
     width: min(var(--max-width), calc(100% - 40px));
+
     min-height: calc(100vh - 70px);
 
     margin: auto;
 
     display: grid;
     grid-template-columns: 1.15fr 0.85fr;
+
     align-items: center;
+
     gap: 80px;
 
     padding: 90px 0;
@@ -200,7 +138,9 @@ nav a:hover {
 
 .terminal-label {
     color: var(--text-muted);
-    font-size: 0.8rem;
+
+    font-size: 0.78rem;
+
     margin-bottom: 20px;
 }
 
@@ -210,13 +150,17 @@ nav a:hover {
 
 .hero h1 {
     font-size: clamp(3rem, 7vw, 6rem);
+
     line-height: 1;
+
     letter-spacing: -0.08em;
+
     font-weight: 600;
 }
 
 .cursor {
     color: var(--accent);
+
     animation: blink 1.1s infinite;
 }
 
@@ -229,43 +173,50 @@ nav a:hover {
 .hero h2 {
     margin-top: 25px;
 
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.16em;
-
     color: var(--accent);
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.12em;
 }
 
 .hero h2 span {
     color: var(--text-muted);
+
     margin: 0 5px;
 }
 
 .hero-description {
-    max-width: 620px;
+    max-width: 650px;
 
     margin-top: 30px;
 
     color: var(--text-secondary);
-    font-size: 1rem;
+
+    font-size: 0.9rem;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 15px;
+
+    gap: 12px;
+
     margin-top: 40px;
 }
 
 .button {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
-    padding: 12px 22px;
+    padding: 11px 20px;
 
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-dark);
 
-    font-size: 0.78rem;
+    font-size: 0.72rem;
 
     transition:
         background 0.2s ease,
@@ -275,14 +226,18 @@ nav a:hover {
 
 .button.primary {
     background: var(--accent);
-    color: #06100d;
+
+    color: #ffffff;
+
     border-color: var(--accent);
+
     font-weight: 700;
 }
 
 .button.primary:hover {
-    background: transparent;
-    color: var(--accent);
+    background: var(--accent-dark);
+
+    border-color: var(--accent-dark);
 }
 
 .button.secondary {
@@ -291,74 +246,153 @@ nav a:hover {
 
 .button.secondary:hover {
     border-color: var(--accent);
+
     color: var(--accent);
 }
 
 
-/* ---------------------------------------------------------
-   TERMINAL
-   --------------------------------------------------------- */
+/* =========================
+   PROFILE TERMINAL
+   ========================= */
 
-.hero-terminal {
-    background: var(--terminal);
+.profile-terminal {
+    background: #fbfcfc;
 
     border: 1px solid var(--border);
 
     box-shadow:
-        0 25px 80px rgba(0, 0, 0, 0.35),
-        0 0 60px rgba(84, 225, 193, 0.035);
+        0 20px 60px rgba(22, 45, 40, 0.07);
 }
 
-.terminal-header {
-    height: 36px;
-
+.terminal-top {
     display: flex;
+
     align-items: center;
+    justify-content: space-between;
 
-    gap: 7px;
+    padding: 14px 18px;
 
-    padding: 0 14px;
+    border-bottom: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-size: 0.65rem;
+}
+
+.status {
+    color: var(--accent);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+.profile-row {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding: 17px 20px;
 
     border-bottom: 1px solid var(--border);
 }
 
-.terminal-header span {
-    width: 8px;
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: var(--border-light);
+.profile-row:last-child {
+    border-bottom: none;
 }
 
-.terminal-body {
-    padding: 25px;
+.profile-row span {
+    color: var(--accent);
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.12em;
+}
+
+.profile-row strong {
+    color: var(--text);
+
+    font-size: 0.75rem;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   SECTIONS
+   ========================= */
+
+.section {
+    width: min(var(--max-width), calc(100% - 40px));
+
+    margin: auto;
+
+    padding: 110px 0;
+}
+
+.section-alt {
+    width: 100%;
+    max-width: none;
+
+    padding-left: max(20px, calc((100% - var(--max-width)) / 2));
+    padding-right: max(20px, calc((100% - var(--max-width)) / 2));
+
+    background: var(--bg-soft);
+
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 16px;
+
+    margin-bottom: 50px;
+}
+
+.section-heading span {
+    color: var(--accent);
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+}
+
+.section-heading h2 {
+    color: var(--text);
+
+    font-size: 2rem;
+
+    font-weight: 500;
+
+    letter-spacing: -0.05em;
+}
+
+.section-intro {
+    max-width: 750px;
+
+    margin-top: -25px;
+
+    margin-bottom: 45px;
 
     color: var(--text-secondary);
 
-    font-size: 0.78rem;
-}
-
-.terminal-body p {
-    margin-bottom: 18px;
-}
-
-.prompt {
-    color: var(--accent);
-}
-
-.terminal-body pre {
-    color: #a9b9bd;
-    white-space: pre-wrap;
+    font-size: 0.82rem;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    ABOUT
-   --------------------------------------------------------- */
+   ========================= */
 
 .about-grid {
     display: grid;
+
     grid-template-columns: 1.2fr 0.8fr;
 
     gap: 80px;
@@ -366,20 +400,25 @@ nav a:hover {
 
 .about-grid p {
     color: var(--text-secondary);
+
+    font-size: 0.82rem;
+
     margin-bottom: 22px;
 }
 
 .about-grid .lead {
     color: var(--text);
-    font-size: 1.15rem;
+
+    font-size: 1rem;
 }
 
 .about-card {
-    border-left: 1px solid var(--border-light);
+    border-left: 1px solid var(--border-dark);
 }
 
 .about-item {
     display: flex;
+
     flex-direction: column;
 
     padding: 18px 25px;
@@ -389,176 +428,199 @@ nav a:hover {
 
 .about-key {
     color: var(--accent);
-    font-size: 0.65rem;
+
+    font-size: 0.6rem;
+
     letter-spacing: 0.12em;
-    margin-bottom: 5px;
+
+    margin-bottom: 4px;
 }
 
 .about-item span:last-child {
     color: var(--text-secondary);
-    font-size: 0.8rem;
+
+    font-size: 0.75rem;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    TECHNOLOGIES
-   --------------------------------------------------------- */
+   ========================= */
 
 .tech-grid {
     display: grid;
+
     grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+
+    gap: 16px;
 }
 
 .tech-card {
     padding: 30px;
 
-    background: var(--bg-card);
+    background: var(--card);
 
     border: 1px solid var(--border);
 
     transition:
         transform 0.2s ease,
-        border-color 0.2s ease;
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .tech-card:hover {
     transform: translateY(-4px);
-    border-color: var(--accent-dark);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 12px 35px rgba(21, 155, 128, 0.07);
 }
 
 .tech-icon {
     display: inline-flex;
 
-    min-width: 46px;
-    height: 32px;
+    min-width: 45px;
+    height: 30px;
 
     padding: 0 9px;
 
     align-items: center;
     justify-content: center;
 
-    border: 1px solid var(--accent-dark);
+    color: var(--accent-dark);
 
-    color: var(--accent);
+    background: var(--accent-soft);
 
-    font-size: 0.65rem;
+    border: 1px solid #cceee5;
+
+    font-size: 0.6rem;
+
     font-weight: 700;
 
-    margin-bottom: 25px;
+    margin-bottom: 22px;
 }
 
 .tech-card h3 {
-    font-size: 1rem;
-    font-weight: 500;
-    margin-bottom: 12px;
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
 }
 
 .tech-card p {
-    color: var(--text-muted);
-    font-size: 0.78rem;
+    color: var(--text-secondary);
+
+    font-size: 0.72rem;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    PROJECTS
-   --------------------------------------------------------- */
+   ========================= */
 
 .projects-grid {
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
+
     gap: 18px;
 }
 
 .project-card {
-    position: relative;
-
     display: grid;
-    grid-template-columns: 55px 1fr;
 
-    min-height: 300px;
+    grid-template-columns: 45px 1fr;
+
+    min-height: 290px;
 
     padding: 30px;
 
-    background:
-        linear-gradient(
-            135deg,
-            rgba(84, 225, 193, 0.025),
-            transparent 50%
-        ),
-        var(--bg-card);
+    background: var(--card);
 
     border: 1px solid var(--border);
 
     transition:
+        transform 0.2s ease,
         border-color 0.2s ease,
-        transform 0.2s ease;
+        box-shadow 0.2s ease;
 }
 
 .project-card:hover {
     transform: translateY(-4px);
-    border-color: var(--accent-dark);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 15px 40px rgba(22, 45, 40, 0.07);
 }
 
 .project-number {
     color: var(--accent);
-    font-size: 0.7rem;
-    padding-top: 3px;
-}
 
-.project-content {
-    display: flex;
-    flex-direction: column;
+    font-size: 0.65rem;
+
+    padding-top: 3px;
 }
 
 .project-module {
     color: var(--text-muted);
-    font-size: 0.62rem;
-    letter-spacing: 0.12em;
-    margin-bottom: 18px;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.1em;
 }
 
 .project-card h3 {
-    font-size: 1.2rem;
+    margin-top: 14px;
+
+    margin-bottom: 13px;
+
+    font-size: 1.1rem;
+
     font-weight: 500;
 
-    margin-bottom: 15px;
+    letter-spacing: -0.03em;
 }
 
 .project-card p {
     color: var(--text-secondary);
-    font-size: 0.78rem;
 
-    margin-bottom: 25px;
+    font-size: 0.72rem;
+
+    margin-bottom: 24px;
 }
 
 .project-stack {
     display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
 
-    margin-top: auto;
+    flex-wrap: wrap;
+
+    gap: 6px;
 }
 
 .project-stack span {
-    padding: 5px 8px;
+    padding: 4px 7px;
 
-    border: 1px solid var(--border-light);
+    background: #f8faf9;
+
+    border: 1px solid var(--border);
 
     color: var(--text-muted);
 
-    font-size: 0.62rem;
+    font-size: 0.58rem;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    CASE STUDY
-   --------------------------------------------------------- */
+   ========================= */
 
 .case-study {
-    border: 1px solid var(--border);
+    background: var(--card);
 
-    background: var(--bg-card);
+    border: 1px solid var(--border);
 }
 
 .case-header {
@@ -569,8 +631,10 @@ nav a:hover {
 
 .case-label {
     color: var(--accent);
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.13em;
 }
 
 .case-header h3 {
@@ -579,8 +643,11 @@ nav a:hover {
     margin: 20px 0;
 
     font-size: clamp(1.8rem, 4vw, 3rem);
+
     line-height: 1.2;
-    letter-spacing: -0.05em;
+
+    letter-spacing: -0.06em;
+
     font-weight: 500;
 }
 
@@ -588,11 +655,13 @@ nav a:hover {
     max-width: 800px;
 
     color: var(--text-secondary);
-    font-size: 0.85rem;
+
+    font-size: 0.78rem;
 }
 
 .case-grid {
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 }
 
@@ -605,14 +674,16 @@ nav a:hover {
 }
 
 .case-column h4 {
-    color: var(--text);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+
     margin-bottom: 20px;
 }
 
 .case-column p {
     color: var(--text-secondary);
-    font-size: 0.78rem;
+
+    font-size: 0.72rem;
+
     margin-bottom: 18px;
 }
 
@@ -625,22 +696,23 @@ nav a:hover {
 
     color: var(--text-secondary);
 
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 
     border-bottom: 1px solid var(--border);
 }
 
 .architecture-list strong {
-    color: var(--accent);
+    color: var(--accent-dark);
 }
 
 
-/* ---------------------------------------------------------
-   CASE METRICS
-   --------------------------------------------------------- */
+/* =========================
+   METRICS
+   ========================= */
 
 .case-metrics {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
 
     border-top: 1px solid var(--border);
@@ -649,6 +721,7 @@ nav a:hover {
 
 .case-metrics div {
     display: flex;
+
     flex-direction: column;
 
     padding: 35px;
@@ -664,6 +737,7 @@ nav a:hover {
     color: var(--accent);
 
     font-size: 2rem;
+
     font-weight: 500;
 
     letter-spacing: -0.06em;
@@ -672,17 +746,19 @@ nav a:hover {
 .case-metrics span {
     color: var(--text-muted);
 
-    font-size: 0.65rem;
-    margin-top: 5px;
+    font-size: 0.6rem;
+
+    margin-top: 4px;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    CASE FOOTER
-   --------------------------------------------------------- */
+   ========================= */
 
 .case-footer {
     display: grid;
+
     grid-template-columns: 1fr auto;
 
     gap: 40px;
@@ -691,26 +767,29 @@ nav a:hover {
 }
 
 .case-footer h4 {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
+
     margin-bottom: 18px;
 }
 
 .case-note {
-    display: flex;
-    align-items: flex-end;
-
     max-width: 280px;
+
+    display: flex;
+
+    align-items: flex-end;
 }
 
 .case-note p {
     color: var(--text-muted);
-    font-size: 0.65rem;
+
+    font-size: 0.6rem;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    CONTACT
-   --------------------------------------------------------- */
+   ========================= */
 
 .contact-section {
     text-align: center;
@@ -722,6 +801,7 @@ nav a:hover {
 
 .contact-content {
     max-width: 700px;
+
     margin: auto;
 }
 
@@ -729,6 +809,7 @@ nav a:hover {
     font-size: clamp(2rem, 5vw, 3.5rem);
 
     letter-spacing: -0.06em;
+
     font-weight: 500;
 }
 
@@ -736,14 +817,18 @@ nav a:hover {
     margin-top: 20px;
 
     color: var(--text-secondary);
+
+    font-size: 0.8rem;
 }
 
 .contact-links {
     display: flex;
+
     justify-content: center;
+
     flex-wrap: wrap;
 
-    gap: 12px;
+    gap: 10px;
 
     margin-top: 35px;
 }
@@ -751,11 +836,11 @@ nav a:hover {
 .contact-links a {
     padding: 10px 20px;
 
-    border: 1px solid var(--border-light);
+    border: 1px solid var(--border-dark);
 
     color: var(--text-secondary);
 
-    font-size: 0.75rem;
+    font-size: 0.7rem;
 
     transition:
         color 0.2s ease,
@@ -764,16 +849,19 @@ nav a:hover {
 
 .contact-links a:hover {
     color: var(--accent);
+
     border-color: var(--accent);
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    FOOTER
-   --------------------------------------------------------- */
+   ========================= */
 
 footer {
     border-top: 1px solid var(--border);
+
+    background: #ffffff;
 }
 
 .footer-content {
@@ -784,40 +872,42 @@ footer {
     margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 20px;
 
     color: var(--text-muted);
 
-    font-size: 0.65rem;
+    font-size: 0.6rem;
 }
 
 
-/* ---------------------------------------------------------
+/* =========================
    RESPONSIVE
-   --------------------------------------------------------- */
+   ========================= */
 
 @media (max-width: 900px) {
 
     nav {
-        gap: 15px;
+        gap: 16px;
     }
 
     .hero {
         grid-template-columns: 1fr;
-        gap: 50px;
 
-        padding-top: 70px;
+        gap: 50px;
     }
 
-    .hero-terminal {
+    .profile-terminal {
         max-width: 700px;
     }
 
     .about-grid {
         grid-template-columns: 1fr;
+
         gap: 45px;
     }
 
@@ -836,7 +926,6 @@ footer {
     .case-metrics div:nth-child(-n + 2) {
         border-bottom: 1px solid var(--border);
     }
-
 }
 
 
@@ -852,13 +941,15 @@ footer {
     }
 
     .nav-container {
-        height: auto;
         min-height: 65px;
 
         flex-direction: column;
+
         align-items: flex-start;
 
         padding: 15px 0;
+
+        gap: 12px;
     }
 
     nav {
@@ -866,7 +957,7 @@ footer {
 
         overflow-x: auto;
 
-        padding-bottom: 4px;
+        padding-bottom: 3px;
     }
 
     nav a {
@@ -889,12 +980,9 @@ footer {
         line-height: 1.8;
     }
 
-    .hero-description {
-        font-size: 0.85rem;
-    }
-
     .hero-buttons {
         flex-direction: column;
+
         align-items: stretch;
     }
 
@@ -925,6 +1013,7 @@ footer {
 
     .case-column + .case-column {
         border-left: none;
+
         border-top: 1px solid var(--border);
     }
 
@@ -938,6 +1027,7 @@ footer {
 
     .case-footer {
         grid-template-columns: 1fr;
+
         padding: 30px;
     }
 
@@ -947,11 +1037,11 @@ footer {
 
     .footer-content {
         flex-direction: column;
+
         justify-content: center;
 
         padding: 25px 0;
     }
-
 }
 
 
@@ -970,17 +1060,8 @@ footer {
         width: calc(100% - 30px);
     }
 
-    .section-heading {
-        gap: 12px;
-    }
-
     .section-heading h2 {
         font-size: 1.5rem;
-    }
-
-    .terminal-body {
-        padding: 18px;
-        font-size: 0.68rem;
     }
 
     .case-metrics {
@@ -989,12 +1070,11 @@ footer {
 
     .case-metrics div {
         border-right: none;
+
         border-bottom: 1px solid var(--border);
     }
 
     .case-metrics div:last-child {
         border-bottom: none;
     }
-
 }
-```
