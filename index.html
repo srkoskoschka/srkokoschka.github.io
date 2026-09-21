@@ -96,7 +96,7 @@
 
                         <div class="profile-row">
                             <span class="profile-key">data</span>
-                            <span class="profile-value">SQL · ETL · Analytics</span>
+                            <span class="profile-value">Python · ETL · Analytics</span>
                         </div>
 
                         <div class="profile-row">
@@ -160,6 +160,7 @@
 
                         <div class="focus-item">
                             <span class="focus-index">01</span>
+
                             <div>
                                 <strong>Cloud</strong>
                                 <p>Arquitecturas AWS y servicios administrados.</p>
@@ -168,14 +169,16 @@
 
                         <div class="focus-item">
                             <span class="focus-index">02</span>
+
                             <div>
                                 <strong>Data</strong>
-                                <p>SQL, análisis, ETL y modelamiento de datos.</p>
+                                <p>Python, análisis, ETL y modelamiento de datos.</p>
                             </div>
                         </div>
 
                         <div class="focus-item">
                             <span class="focus-index">03</span>
+
                             <div>
                                 <strong>Backend</strong>
                                 <p>Python, APIs y desarrollo de servicios.</p>
@@ -228,6 +231,7 @@
                         <h3>Data</h3>
 
                         <div class="tag-list">
+                            <span>Python</span>
                             <span>SQL</span>
                             <span>PostgreSQL</span>
                             <span>ETL</span>
@@ -503,7 +507,7 @@
                     <div class="case-header">
 
                         <span class="case-label">
-                            PROYECTO DE ANÁLISIS Y MODELAMIENTO
+                            PROTOTIPO DE ANÁLISIS Y MODELAMIENTO
                         </span>
 
                         <h3>
@@ -512,9 +516,10 @@
                         </h3>
 
                         <p>
-                            Proyecto orientado al análisis de datos de incendios
-                            forestales y al desarrollo de un modelo predictivo capaz
-                            de identificar escenarios o áreas que podrían requerir
+                            Prototipo orientado al procesamiento y análisis de datos
+                            relacionados con incendios forestales en Chile,
+                            explorando el uso de técnicas de Machine Learning para
+                            identificar escenarios asociados a la necesidad de
                             evacuación.
                         </p>
 
@@ -530,16 +535,18 @@
                             <h4>El desafío</h4>
 
                             <p>
-                                Los incendios forestales generan información
-                                heterogénea proveniente de distintas fuentes
-                                geográficas y temporales.
+                                El proyecto parte de la necesidad de trabajar con
+                                información proveniente de distintas fuentes y
+                                transformarla en un conjunto de datos adecuado para
+                                su posterior análisis.
                             </p>
 
                             <p>
-                                El proyecto busca transformar estos datos en
-                                información útil para analizar patrones y construir
-                                un modelo de clasificación asociado a la necesidad
-                                de evacuación.
+                                El objetivo del prototipo fue explorar cómo los datos
+                                asociados a incendios forestales pueden ser
+                                preparados, analizados y utilizados para construir
+                                un modelo de clasificación relacionado con la
+                                variable <code>necesita_evacuacion</code>.
                             </p>
 
                         </div>
@@ -554,33 +561,44 @@
                             <ul class="case-list">
 
                                 <li>
-                                    <strong>Preparación de datos</strong>
+                                    <strong>ETL y preparación de datos</strong>
                                     <span>
-                                        Limpieza, transformación y exploración
-                                        utilizando Pandas.
+                                        Extracción, transformación, limpieza y
+                                        preparación de los datos utilizando Python
+                                        y Jupyter Notebooks.
                                     </span>
                                 </li>
 
                                 <li>
-                                    <strong>Análisis espacial</strong>
+                                    <strong>Análisis exploratorio</strong>
                                     <span>
-                                        Integración y análisis de información
-                                        geográfica mediante GeoPandas.
+                                        Exploración de las variables y comportamiento
+                                        de los datos para identificar patrones y
+                                        relaciones relevantes.
+                                    </span>
+                                </li>
+
+                                <li>
+                                    <strong>Análisis geoespacial</strong>
+                                    <span>
+                                        Procesamiento y análisis de información
+                                        geográfica mediante las librerías
+                                        correspondientes de Python.
                                     </span>
                                 </li>
 
                                 <li>
                                     <strong>Feature engineering</strong>
                                     <span>
-                                        Construcción y selección de variables
-                                        relevantes para el modelo.
+                                        Preparación y transformación de variables
+                                        para su utilización en el modelo.
                                     </span>
                                 </li>
 
                                 <li>
                                     <strong>Machine Learning</strong>
                                     <span>
-                                        Desarrollo de un modelo de clasificación
+                                        Desarrollo de un prototipo de clasificación
                                         utilizando Scikit-learn.
                                     </span>
                                 </li>
@@ -588,16 +606,9 @@
                                 <li>
                                     <strong>Variable objetivo</strong>
                                     <span>
-                                        Clasificación mediante la variable
-                                        <code>necesita_evacuacion</code>.
-                                    </span>
-                                </li>
-
-                                <li>
-                                    <strong>Evaluación</strong>
-                                    <span>
-                                        Evaluación del comportamiento y desempeño
-                                        del modelo predictivo.
+                                        Exploración de la variable
+                                        <code>necesita_evacuacion</code> como
+                                        objetivo del modelo.
                                     </span>
                                 </li>
 
@@ -611,30 +622,30 @@
                     <div class="case-metrics">
 
                         <div class="metric">
-                            <span class="metric-value">PY</span>
+                            <span class="metric-value">ETL</span>
                             <span class="metric-label">
-                                Análisis y modelamiento
+                                Preparación de datos
+                            </span>
+                        </div>
+
+                        <div class="metric">
+                            <span class="metric-value">EDA</span>
+                            <span class="metric-label">
+                                Análisis exploratorio
                             </span>
                         </div>
 
                         <div class="metric">
                             <span class="metric-value">GEO</span>
                             <span class="metric-label">
-                                Análisis espacial
+                                Análisis geoespacial
                             </span>
                         </div>
 
                         <div class="metric">
                             <span class="metric-value">ML</span>
                             <span class="metric-label">
-                                Clasificación predictiva
-                            </span>
-                        </div>
-
-                        <div class="metric">
-                            <span class="metric-value">SQL</span>
-                            <span class="metric-label">
-                                Consulta y manejo de datos
+                                Prototipo predictivo
                             </span>
                         </div>
 
@@ -648,19 +659,19 @@
 
                             <div class="tag-list">
                                 <span>Python</span>
+                                <span>Jupyter</span>
                                 <span>Pandas</span>
                                 <span>GeoPandas</span>
                                 <span>Scikit-learn</span>
-                                <span>SQL</span>
-                                <span>Jupyter</span>
                                 <span>Git</span>
                             </div>
                         </div>
 
                         <p>
-                            Proyecto orientado al análisis de datos,
-                            modelamiento predictivo e integración de
-                            información geoespacial.
+                            Prototipo desarrollado con fines exploratorios para
+                            demostrar un flujo de trabajo de datos desde la
+                            preparación mediante ETL hasta el análisis y
+                            modelamiento predictivo.
                         </p>
 
                     </div>
